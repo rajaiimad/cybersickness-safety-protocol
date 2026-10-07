@@ -1,0 +1,73 @@
+Fold AUC (smoothed score),RF,fold AUC minus clock,+0.031,Wilcoxon,0.753,0.820
+Fold AUC (smoothed score),GB,fold AUC minus clock,+0.006,Wilcoxon,0.312,0.820
+Fold AUC (smoothed score),RF+GB,fold AUC minus clock,+0.025,Wilcoxon,0.753,0.820
+Fold AUC (smoothed score),LR,fold AUC minus clock,−0.048,Wilcoxon,0.392,0.820
+Fold AUC (smoothed score),MLP,fold AUC minus clock,−0.036,Wilcoxon,0.676,0.820
+Smoothing window w = 1,RF,fold MCC minus clock,+0.033,Wilcoxon,0.860,0.884
+Smoothing window w = 1,GB,fold MCC minus clock,+0.026,Wilcoxon,0.597,0.820
+Smoothing window w = 1,RF+GB,fold MCC minus clock,+0.030,Wilcoxon,0.597,0.820
+Smoothing window w = 1,LR,fold MCC minus clock,−0.140,Wilcoxon,0.175,0.820
+Smoothing window w = 1,MLP,fold MCC minus clock,−0.084,Wilcoxon,0.051,0.820
+Smoothing window w = 15,RF,fold MCC minus clock,+0.047,Wilcoxon,0.632,0.820
+Smoothing window w = 15,GB,fold MCC minus clock,+0.056,Wilcoxon,0.528,0.820
+Smoothing window w = 15,RF+GB,fold MCC minus clock,+0.056,Wilcoxon,0.528,0.820
+Smoothing window w = 15,LR,fold MCC minus clock,−0.161,Wilcoxon,0.130,0.820
+Smoothing window w = 15,MLP,fold MCC minus clock,−0.067,Wilcoxon,0.175,0.820
+Smoothing window w = 31,RF,fold MCC minus clock,+0.069,Wilcoxon,0.528,0.820
+Smoothing window w = 31,GB,fold MCC minus clock,+0.076,Wilcoxon,0.464,0.820
+Smoothing window w = 31,RF+GB,fold MCC minus clock,+0.072,Wilcoxon,0.495,0.820
+Smoothing window w = 31,LR,fold MCC minus clock,−0.163,Wilcoxon,0.159,0.820
+Smoothing window w = 31,MLP,fold MCC minus clock,−0.052,Wilcoxon,0.323,0.820
+Smoothing window w = 121,RF,fold MCC minus clock,+0.033,Wilcoxon,0.860,0.884
+Smoothing window w = 121,GB,fold MCC minus clock,+0.077,Wilcoxon,0.562,0.820
+Smoothing window w = 121,RF+GB,fold MCC minus clock,+0.065,Wilcoxon,0.632,0.820
+Smoothing window w = 121,LR,fold MCC minus clock,−0.120,Wilcoxon,0.375,0.820
+Smoothing window w = 121,MLP,fold MCC minus clock,−0.048,Wilcoxon,0.256,0.820
+Smoothing window w = 201,RF,fold MCC minus clock,+0.018,Wilcoxon,0.860,0.884
+Smoothing window w = 201,GB,fold MCC minus clock,+0.087,Wilcoxon,0.274,0.820
+Smoothing window w = 201,RF+GB,fold MCC minus clock,+0.056,Wilcoxon,0.669,0.820
+Smoothing window w = 201,LR,fold MCC minus clock,−0.075,Wilcoxon,0.562,0.820
+Smoothing window w = 201,MLP,fold MCC minus clock,−0.053,Wilcoxon,0.632,0.820
+w chosen on validation groups,RF,fold MCC minus clock,+0.006,Wilcoxon,0.900,0.900
+w chosen on validation groups,GB,fold MCC minus clock,+0.041,Wilcoxon,0.900,0.900
+w chosen on validation groups,RF+GB,fold MCC minus clock,+0.023,Wilcoxon,0.860,0.884
+w chosen on validation groups,LR,fold MCC minus clock,−0.163,Wilcoxon,0.044,0.820
+w chosen on validation groups,MLP,fold MCC minus clock,−0.035,Wilcoxon,0.433,0.820
+Training seed 1,RF,fold MCC minus clock,+0.069,Wilcoxon,0.464,0.820
+Training seed 1,RF+GB,fold MCC minus clock,+0.093,Wilcoxon,0.433,0.820
+Training seed 1,MLP,fold MCC minus clock,+0.005,Wilcoxon,0.669,0.820
+Training seed 2,RF,fold MCC minus clock,+0.078,Wilcoxon,0.375,0.820
+Training seed 2,RF+GB,fold MCC minus clock,+0.092,Wilcoxon,0.464,0.820
+Training seed 2,MLP,fold MCC minus clock,−0.061,Wilcoxon,0.105,0.820
+99 features (descriptors included),RF,fold MCC minus clock,+0.071,Wilcoxon,0.495,0.820
+99 features (descriptors included),GB,fold MCC minus clock,+0.035,Wilcoxon,0.744,0.820
+99 features (descriptors included),RF+GB,fold MCC minus clock,+0.042,Wilcoxon,0.744,0.820
+99 features (descriptors included),LR,fold MCC minus clock,−0.035,Wilcoxon,0.706,0.820
+99 features (descriptors included),MLP,fold MCC minus clock,+0.000,Wilcoxon,0.632,0.820
+Leave one recording out,RF,fold MCC minus clock,−0.013,Wilcoxon,0.732,0.820
+Leave one recording out,GB,fold MCC minus clock,−0.044,Wilcoxon,0.407,0.820
+Leave one recording out,RF+GB,fold MCC minus clock,−0.039,Wilcoxon,0.493,0.820
+Leave one recording out,LR,fold MCC minus clock,−0.111,Wilcoxon,0.290,0.820
+Leave one recording out,MLP,fold MCC minus clock,−0.040,Wilcoxon,0.458,0.820
+Merged grouping (20 groups),RF,fold MCC minus clock,+0.079,Wilcoxon,0.528,0.820
+Merged grouping (20 groups),GB,fold MCC minus clock,+0.093,Wilcoxon,0.495,0.820
+Merged grouping (20 groups),RF+GB,fold MCC minus clock,+0.094,Wilcoxon,0.495,0.820
+Merged grouping (20 groups),LR,fold MCC minus clock,−0.169,Wilcoxon,0.093,0.820
+Merged grouping (20 groups),MLP,fold MCC minus clock,−0.089,Wilcoxon,0.093,0.820
+"Episode recall, primary rule",RF,observed minus shifted alarms,+0.029,"circular shift, one sided",0.376,0.820
+"Episode recall, primary rule",GB,observed minus shifted alarms,+0.037,"circular shift, one sided",0.300,0.820
+"Episode recall, primary rule",RF+GB,observed minus shifted alarms,+0.038,"circular shift, one sided",0.266,0.820
+"Episode recall, primary rule",LR,observed minus shifted alarms,+0.008,"circular shift, one sided",0.560,0.820
+"Episode recall, primary rule",MLP,observed minus shifted alarms,+0.098,"circular shift, one sided",0.040,0.820
+"Episode recall, primary rule",Clock,observed minus shifted alarms,+0.042,"circular shift, one sided",0.310,0.820
+"Episode recall, matched alarm rate 0.44",RF,observed minus shifted alarms,+0.054,"circular shift, one sided",0.210,0.820
+"Episode recall, matched alarm rate 0.44",GB,observed minus shifted alarms,−0.007,"circular shift, one sided",0.720,0.820
+"Episode recall, matched alarm rate 0.44",RF+GB,observed minus shifted alarms,+0.033,"circular shift, one sided",0.358,0.820
+"Episode recall, matched alarm rate 0.44",LR,observed minus shifted alarms,+0.002,"circular shift, one sided",0.636,0.820
+"Episode recall, matched alarm rate 0.44",MLP,observed minus shifted alarms,+0.058,"circular shift, one sided",0.186,0.820
+"Episode recall, matched alarm rate 0.44",Clock,observed minus shifted alarms,+0.008,"circular shift, one sided",0.548,0.820
+Within group severity ranking,RF,severity ranking minus clock,+0.078,"group bootstrap, two sided",0.652,0.820
+Within group severity ranking,GB,severity ranking minus clock,+0.112,"group bootstrap, two sided",0.640,0.820
+Within group severity ranking,RF+GB,severity ranking minus clock,+0.099,"group bootstrap, two sided",0.652,0.820
+Within group severity ranking,LR,severity ranking minus clock,+0.151,"group bootstrap, two sided",0.517,0.820
+Within group severity ranking,MLP,severity ranking minus clock,+0.162,"group bootstrap, two sided",0.633,0.820

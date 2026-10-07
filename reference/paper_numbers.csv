@@ -1,0 +1,269 @@
+id,location,printed,expr
+a01,Abstract; Sec III-A,35,str(int(DF['recordings']))
+a02,Abstract; Sec III-A,22,str(int(DF['participant_groups']))
+a03,Abstract; Sec V,0.33,"f2(lk('group disjoint, 76 features').mcc)"
+a04,Abstract; Sec V,0.99,"f2(lk('random 5 fold, 76 features').mcc)"
+a05,Abstract; Sec V-A,0.197,f3(PR.loc[DET].mcc.min())
+a06,Abstract; Sec V-A,0.462,f3(PR.loc[DET].mcc.max())
+a07,Abstract; Sec V-A,0.365,f3(PR.loc['Clock'].mcc)
+a08,Abstract; Sec VI (trait improvement of 0.13 detected in 38%),0.13,"f2(ct('trait', 1.5).dl)"
+a09,Abstract; Sec VI,38%,"pct(ct('trait', 1.5).power_lpo)"
+d01,Sec III-A (windows),"9,390",cnt(DF['windows'])
+d02,Sec III-A (positive),"4,147",cnt(DF['positive_windows'])
+d03,Sec III-A (negative),"5,243",cnt(DF['negative_windows'])
+d04,Sec III-A (prevalence),0.44,f2(DF['prevalence'])
+d05,Sec III-A (label changes once),19,str(int(DF['recordings_label_changes_once']))
+d06,Sec III-A (never change),9,str(int(DF['recordings_label_never_changes']))
+d07,Sec III-A (change more than once),7,str(int(DF['recordings_label_changes_more_than_once']))
+d08,Sec III-A (raw sessions),74,str(int(AF['raw_session_folders']))
+d09,Sec III-A (flight sessions),47,str(int(AF['raw_flight_sessions']))
+d10,Sec III-A (race sessions),27,str(int(AF['raw_race_sessions']))
+d11,Sec III-A (median minutes between same day recordings; median of the gaps rounded to 0.1 min),7.2,f1(AF['same_day_gap_median_of_rounded_min'])
+d12,Sec III-A (groups with more than one recording),7,str(int(AF['groups_with_more_than_one_recording']))
+d13,Sec III-A (six recording group spans minutes),47,f0(AF['group_14_span_min'])
+d14,Sec III-A (third recording of group 2 after the second; minutes),50,f0(AF['group_2_max_gap_min'])
+d15,Sec III-A (recordings between them),6,str(int(AF['group_2_other_recordings_between']))
+d16,Sec III-A (other profiles between them),5,str(int(AF['group_2_other_profiles_between']))
+d17,Sec III-A (restarts with different descriptors),2,str(int(AF['restarts_with_different_descriptors']))
+d18,Sec III-A (restarts after a short recording),5,str(int(AF['restarts_after_short_recording']))
+d19,Sec III-A / Table II (groups without positive),6,str(int(DF['groups_without_positive']))
+d20,Sec III-A / Table II (two class groups),16,str(int(DF['groups_with_both_classes']))
+d21,Sec III-B (region of interest varies within recordings),34,str(int(DF['recordings_where_RegionOfInterest_varies']))
+d22,Sec III-B (folds with two zero IQR features),19,str(int(DF['logo_folds_with_2_zero_iqr_primary_features']))
+d23,Sec III-B (folds with three zero IQR features),3,str(int(DF['logo_folds_with_3_zero_iqr_primary_features']))
+d24,Sec III-B (median recording length),302,f0(DF['recording_length_median'])
+d25,Sec III-F (LPGO models per detector),216,str(int(DF['lpgo_pairs_fitted']))
+d26,Sec IV-A (LORO two class recordings),26,str(int(DF['loro_folds_with_both_classes']))
+d27,Sec IV-A (merged groups),20,str(int(DF['merged_groups']))
+l01,Sec V-A (random accuracy),0.995,"f3(lk('random 5 fold, 76 features').acc)"
+l02,Sec V-A (random MCC),0.989,"f3(lk('random 5 fold, 76 features').mcc)"
+l03,Sec V-A (random AUC),1.000,"f3(lk('random 5 fold, 76 features').auc)"
+l04,Sec V-A (LOGO accuracy),0.670,"f3(lk('group disjoint, 76 features').acc)"
+l05,Sec V-A (LOGO MCC),0.325,"f3(lk('group disjoint, 76 features').mcc)"
+l06,Sec V-A (LOGO AUC),0.730,"f3(lk('group disjoint, 76 features').auc)"
+l07,Sec V-A (random MCC 99 features),0.989,"f3(lk('random 5 fold, 99 features').mcc)"
+l08,Sec V-A (LOGO MCC 99 features),0.295,"f3(lk('group disjoint, 99 features').mcc)"
+l09,Sec V-A / Fig 2 (LORO MCC),0.307,f3(LKL.mcc)
+l10,Fig 2 (LORO accuracy),0.660,f3(LKL.acc)
+l11,Fig 2 (LORO AUC),0.728,f3(LKL.auc)
+p01,Sec V-A (RF+GB),0.462,f3(PR.loc['RF+GB'].mcc)
+p02,Sec V-A (GB),0.461,f3(PR.loc['GB'].mcc)
+p03,Sec V-A (RF),0.448,f3(PR.loc['RF'].mcc)
+p04,Sec V-A (MLP),0.288,f3(PR.loc['MLP'].mcc)
+p05,Sec V-A (LR),0.197,f3(PR.loc['LR'].mcc)
+p06,Sec V-A (half width min),0.137,f3(PR.loc[ORDER].mcc_ci.min())
+p07,Sec V-A (half width max),0.185,f3(PR.loc[ORDER].mcc_ci.max())
+p08,Sec V-A (LR vs clock p),0.093,f3(S8.loc['LR'].p_t)
+p09,Sec V-A (pooled alarm min),0.318,f3(PR.loc[DET].pooled_alarm.min())
+p10,Sec V-A (pooled alarm max),0.375,f3(PR.loc[DET].pooled_alarm.max())
+p11,Sec V-A (clock pooled alarm),0.386,f3(PR.loc['Clock'].pooled_alarm)
+p12,Sec V-A (false alarm min),0.141,f3(PR.loc[DET].fa_all.min())
+p13,Sec V-A (false alarm max),0.189,f3(PR.loc[DET].fa_all.max())
+p14,Sec V-A (clock false alarm),0.165,f3(PR.loc['Clock'].fa_all)
+p15,Sec V-A (never sick alarm min),0.152,f3(PR.loc[DET].never_sick_alarm.min())
+p16,Sec V-A (never sick alarm max),0.342,f3(PR.loc[DET].never_sick_alarm.max())
+p17,Sec V-A (clock never sick alarm),0.338,f3(PR.loc['Clock'].never_sick_alarm)
+s01,Sec V-A (difference min),−0.167,sg(S8.loc[DET].dmcc.min())
+s02,Sec V-A (difference max),+0.097,sg(S8.loc[DET].dmcc.max())
+s03,Sec V-A (smallest paired t p),0.093,f3(S8.loc[DET].p_t.min())
+s04,Sec V-A (smallest corrected p),0.214,f3(S8.loc[DET].p_nb.min())
+s05,Sec V-A (smallest BH Wilcoxon p),0.464,f3(S8.loc[DET].p_bh5.min())
+s06,Sec V-A (most folds above the clock),8,str(int(S8.loc[DET].higher.max()))
+s07,Sec V-A (MDE min),0.13,f2(S8.loc[DET].mde.min())
+s08,Sec V-A (MDE max),0.28,f2(S8.loc[DET].mde.max())
+s09,Sec V-A (groups needed min),26,str(int(S8.loc[DET].n010.min()))
+s10,Sec V-A (groups needed max),112,str(int(S8.loc[DET].n010.max()))
+s11,Sec V-A (groups needed median),69,str(int(S8.loc[DET].n010.median()))
+s12,Table IV note (Nadeau-Bengio ratio),0.057,f3(S8.rho.iloc[0])
+e01,Sec V-A (seeds RF min),0.433,f3(SUPS[SUPS.model=='RF'].mcc.min())
+e02,Sec V-A (seeds RF max),0.448,f3(SUPS[SUPS.model=='RF'].mcc.max())
+e03,Sec V-A (seeds RF+GB min),0.457,f3(SUPS[SUPS.model=='RF+GB'].mcc.min())
+e04,Sec V-A (seeds RF+GB max),0.462,f3(SUPS[SUPS.model=='RF+GB'].mcc.max())
+e05,Sec V-A (seeds MLP min),0.288,f3(SUPS[SUPS.model=='MLP'].mcc.min())
+e06,Sec V-A (seeds MLP max),0.369,f3(SUPS[SUPS.model=='MLP'].mcc.max())
+e07,Sec V-A (smallest seed p),0.072,"f3(min(SUPS.p_t.min(), SUPS.p_w.min()))"
+e08,Sec V-A / V-B (MLP matched S3 misses across seeds min),137,str(int(SUPS[SUPS.model=='MLP'].missed_s3_m44.min()))
+e09,Sec V-A / V-B (MLP matched S3 misses across seeds max),265,str(int(SUPS[SUPS.model=='MLP'].missed_s3_m44.max()))
+t01,Sec V-A (fold AUC min),0.818,f3(PR.loc[DET].fold_auc.min())
+t02,Sec V-A (fold AUC max),0.897,f3(PR.loc[DET].fold_auc.max())
+t03,Sec V-A (clock fold AUC),0.866,f3(PR.loc['Clock'].fold_auc)
+t04,Sec V-A (clock folds with AUC 1),8,str(int(PR.loc['Clock'].folds_auc1))
+t05,Sec V-A (fold AUC difference min),−0.048,sg(S8.loc[DET].dauc.min())
+t06,Sec V-A (fold AUC difference max),+0.031,sg(S8.loc[DET].dauc.max())
+t07,Sec V-A (elapsed time Atime),0.530,f3(LA.tm_ref.iloc[0])
+t08,Sec V-A (elapsed time interval),"[0.521, 0.544]","iv(LA.tm_ref_lo.iloc[0], LA.tm_ref_hi.iloc[0])"
+t09,Sec V-A (LPGO min; LR),0.535,f3(LA.loc[DET].tm_lpo.min())
+t10,Sec V-A (LPGO max; RF),0.653,f3(LA.loc[DET].tm_lpo.max())
+t11,Sec V-A (LPGO difference min),+0.005,sg(LA.loc[DET].d_lpo.min())
+t12,Sec V-A (LPGO difference max),+0.123,sg(LA.loc[DET].d_lpo.max())
+t13,Sec V-A (RF lower limit),−0.014,sg(LA.loc['RF'].d_lpo_lo)
+t14,Sec V-A (pooled lower by min),0.003,f3((LA.loc[DET].tm_lpo - LA.loc[DET].tm_pooled).min())
+t15,Sec V-A (pooled lower by max),0.048,f3((LA.loc[DET].tm_lpo - LA.loc[DET].tm_pooled).max())
+r01,Sec V-A (GB with descriptors),0.400,f3(OR.loc['GB'].mcc)
+r02,Sec V-A (LR with descriptors),0.330,f3(OR.loc['LR'].mcc)
+r03,Sec V-A (LR never sick alarm with descriptors),0.677,f3(OR.loc['LR'].never_sick_alarm)
+r04,Sec V-A (LR false alarm with descriptors),0.319,f3(OR.loc['LR'].fa_all)
+r05,Sec V-A (LORO difference min),−0.111,sg(SEC[SEC.family.str.contains('recording')].estimate.min())
+r06,Sec V-A (LORO difference max),−0.013,sg(SEC[SEC.family.str.contains('recording')].estimate.max())
+r07,Sec V-A (pooled MCC RF LORO),0.317,f3(LO.loc['RF'].pooled_mcc)
+r08,Sec V-A (pooled MCC GB LORO),0.255,f3(LO.loc['GB'].pooled_mcc)
+r09,Sec V-A (pooled MCC clock LORO),0.266,f3(LO.loc['Clock'].pooled_mcc)
+r10,Sec V-A (pooled MCC RF LOGO),0.316,f3(PR.loc['RF'].pooled_mcc)
+r11,Sec V-A (pooled MCC GB LOGO),0.326,f3(PR.loc['GB'].pooled_mcc)
+r12,Sec V-A (pooled MCC clock LOGO),0.268,f3(PR.loc['Clock'].pooled_mcc)
+r13,Sec V-A (RF LORO 99 features pooled),0.250,f3(K['loro99_rf_pooled_mcc'])
+r14,Sec V-A (RF LOGO 99 features pooled),0.311,f3(OR.loc['RF'].pooled_mcc)
+r15,Sec V-A (recordings sharing descriptors under LORO),20,str(int(K['loro_shared_recordings']))
+r16,Sec V-A (GB multi recording groups LOGO),0.362,"f3(lg('GB', 'LOGO'))"
+r17,Sec V-A (GB multi recording groups LORO),0.221,"f3(lg('GB', 'LORO'))"
+r18,Sec V-A (RF multi recording groups LOGO),0.299,"f3(lg('RF', 'LOGO'))"
+r19,Sec V-A (RF multi recording groups LORO),0.303,"f3(lg('RF', 'LORO'))"
+r20,Sec V-A (merged grouping within),0.01,"str((ME.loc[ORDER].mcc - PR.loc[ORDER].mcc).abs().max() < 0.01).replace('True', '0.01')"
+v01,Sec V-B (S3 misses min; LR),253,str(int(SV.loc[DET].missed_s3.min()))
+v02,Sec V-B (S3 misses max; MLP),450,str(int(SV.loc[DET].missed_s3.max()))
+v03,Sec V-B (clock S3 misses),328,str(int(SV.loc['Clock'].missed_s3))
+v04,Sec V-B (matched misses min),124,str(int(SV.loc[DET].missed_s3_m44.min()))
+v05,Sec V-B (matched misses max),330,str(int(SV.loc[DET].missed_s3_m44.max()))
+v06,Sec V-B (clock matched misses),267,str(int(SV.loc['Clock'].missed_s3_m44))
+v07,Sec V-B (S3 windows of the six recording group),290,str(int(DF['severity_3_windows_in_largest_group']))
+v08,Sec V-B (RF misses in that group at matched rate),194,str(int(S3B[(S3B.model=='RF')&(S3B.rule=='m44')&(S3B.group==14)].missed_s3.iloc[0]))
+v09,Sec V-B (clock misses in that group at matched rate),44,str(int(S3B[(S3B.model=='Clock')&(S3B.rule=='m44')&(S3B.group==14)].missed_s3.iloc[0]))
+v10,Sec V-B (trees without the group min),48,"str(int(S3G[S3G.model.isin(['RF', 'GB', 'RF+GB'])&(S3G.rule=='m44')].without_big.min()))"
+v11,Sec V-B (trees without the group max),85,"str(int(S3G[S3G.model.isin(['RF', 'GB', 'RF+GB'])&(S3G.rule=='m44')].without_big.max()))"
+v12,Sec V-B (remaining S3 windows),531,str(int(S3G.n_without.iloc[0]))
+v13,Sec V-B (clock without the group),223,str(int(S3G[(S3G.model=='Clock')&(S3G.rule=='m44')].without_big.iloc[0]))
+v14,Sec V-B (MLP without the group),140,str(int(S3G[(S3G.model=='MLP')&(S3G.rule=='m44')].without_big.iloc[0]))
+v15,Sec V-B (LR without the group),93,str(int(S3G[(S3G.model=='LR')&(S3G.rule=='m44')].without_big.iloc[0]))
+v16,Sec V-B (Asev min),0.779,f3(AS.loc[DET].a_sev.min())
+v17,Sec V-B (Asev max),0.864,f3(AS.loc[DET].a_sev.max())
+v18,Sec V-B (clock Asev),0.702,f3(AS.a_sev_clock.iloc[0])
+v19,Sec V-B (Asev difference min),+0.078,sg(AS.loc[DET].d_pooled.min())
+v20,Sec V-B (Asev difference max),+0.162,sg(AS.loc[DET].d_pooled.max())
+v21,Sec V-B (clock in group 10),0.403,"f3(asg('Clock', 10))"
+v22,Sec V-B (detectors in group 10 min),0.752,"f3(min(asg(m, 10) for m in DET))"
+v23,Sec V-B (detectors in group 10 max),0.977,"f3(max(asg(m, 10) for m in DET))"
+v24,Sec V-B (without group 10 min),−0.087,sg(AS.loc[DET].d_pooled_without_low.min())
+v25,Sec V-B (without group 10 max),−0.012,sg(AS.loc[DET].d_pooled_without_low.max())
+v26,Sec V-B (share of pairs in group 14),57%,pct(asg_pairs(14) / asg_pairs())
+v27,Sec V-B (clock in group 14),0.836,"f3(asg('Clock', 14))"
+v28,Sec V-B (detectors in group 14 min),0.732,"f3(min(asg(m, 14) for m in DET))"
+v29,Sec V-B (detectors in group 14 max),0.822,"f3(max(asg(m, 14) for m in DET))"
+v30,Sec V-B (equal weights min),−0.084,sg(AS.loc[DET].d_equal.min())
+v31,Sec V-B (equal weights max),+0.062,sg(AS.loc[DET].d_equal.max())
+v32,Sec V-B (groups above clock min),1,str(int(AS.loc[DET].groups_above_clock.min()))
+v33,Sec V-B (groups above clock max),3,str(int(AS.loc[DET].groups_above_clock.max()))
+v34,Sec V-B (resamples omitting group 10),33%,pct(AS.share_resamples_without_low.iloc[0])
+v35,Sec V-B (LR interval),"[−0.031, 0.472]","iv(AS.loc['LR'].d_lo, AS.loc['LR'].d_hi)"
+v36,Sec V-B (LR bootstrap p),0.517,f3(AS.loc['LR'].p_boot_two_sided)
+v37,Sec V-B (distinct resamples),462,str(int(K['boot_distinct_6']))
+v38,Sec V-B (LR without group 10),−0.012,sg(AS.loc['LR'].d_pooled_without_low)
+c01,Sec V-C (persistence previous label),0.971,f3(K['persist_prev'])
+c02,Sec V-C (persistence majority 61),0.714,f3(K['persist_major61'])
+c03,Sec V-C (clock episodes),24,str(int(EP.loc['Clock'].detected))
+c04,Sec V-C (RF w=1),0.433,"f3(sw('RF', 1))"
+c05,Sec V-C (GB w=1),0.427,"f3(sw('GB', 1))"
+c06,Sec V-C (clock w=1),0.401,"f3(sw('Clock', 1))"
+c07,Sec V-C (RF w=201),0.253,"f3(sw('RF', 201))"
+c08,Sec V-C (GB w=201),0.322,"f3(sw('GB', 201))"
+c09,Sec V-C (clock w=201),0.234,"f3(sw('Clock', 201))"
+c10,Sec V-C (smallest p for a detector above the clock),0.204,f3(SWP[SWP['diff']>0].p.min())
+c11,Sec V-C (MLP w=1 paired t p),0.040,f3(SWP[(SWP.model=='MLP')&(SWP.w==1)].p.iloc[0])
+c12,Sec V-C (MLP w=1 Wilcoxon p),0.051,f3(SWP[(SWP.model=='MLP')&(SWP.w==1)].pw.iloc[0])
+c13,Sec V-C (nested detectors min),0.206,f3(NW.loc[DET].mcc.min())
+c14,Sec V-C (nested detectors max),0.410,f3(NW.loc[DET].mcc.max())
+c15,Sec V-C (nested clock),0.369,f3(NW.loc['Clock'].mcc)
+c16,Sec V-C (w=61 chosen min),2,str(int(NW.loc[DET].w_61.min()))
+c17,Sec V-C (w=61 chosen max),6,str(int(NW.loc[DET].w_61.max()))
+c18,Sec V-C (clock chose w=1 in),13,str(int((NWC[NWC.model=='Clock'].w==1).sum()))
+c19,Sec V-C (nested BH min),0.222,f3(NW.loc[DET].p_bh.min())
+c20,Sec V-C (nested BH max),0.900,f3(NW.loc[DET].p_bh.max())
+c21,Sec V-C (nested BH across all min),0.820,f3(SEC[SEC.family=='w chosen on validation groups'].p_bh_all.min())
+c22,Sec V-C (nested BH across all max),0.900,f3(SEC[SEC.family=='w chosen on validation groups'].p_bh_all.max())
+c23,Sec V-C (LR nested Wilcoxon p),0.044,f3(NW.loc['LR'].p_w)
+y01,Sec V-D (PPV at 0.01 min),0.015,f3(DP[(DP.model.isin(DET))&((DP.pi-0.01).abs()<1e-9)].ppv.min())
+y02,Sec V-D (PPV at 0.01 max),0.026,f3(DP[(DP.model.isin(DET))&((DP.pi-0.01).abs()<1e-9)].ppv.max())
+y03,Sec V-D (clock PPV at 0.01),0.020,f3(DP[(DP.model=='Clock')&((DP.pi-0.01).abs()<1e-9)].ppv.iloc[0])
+y04,Sec V-D (false alarms per 1000 min),188,f0(1000 * (1 - PR.loc[DET].pooled_spec.max()))
+y05,Sec V-D (false alarms per 1000 max),312,f0(1000 * (1 - PR.loc[DET].pooled_spec.min()))
+y06,Sec V-D (clock false alarms per 1000),270,f0(1000 * (1 - PR.loc['Clock'].pooled_spec))
+y07,Sec V-D (onsets min),0.60,f2(PR.loc[DET].onsets_per_session.min())
+y08,Sec V-D (onsets max),1.03,f2(PR.loc[DET].onsets_per_session.max())
+y09,Sec V-D (clock onsets),0.86,f2(PR.loc['Clock'].onsets_per_session)
+y10,Sec V-D (recall at 0.01 min),0.055,f3(PSH[(PSH.pi-0.01).abs()<1e-9].rec.min())
+y11,Sec V-D (recall at 0.01 max),0.242,f3(PSH[(PSH.pi-0.01).abs()<1e-9].rec.max())
+y12,Sec V-D (no alarm groups min),11,str(int(PSH[(PSH.pi-0.01).abs()<1e-9].folds_no_alarm.min()))
+y13,Sec V-D (no alarm groups max),14,str(int(PSH[(PSH.pi-0.01).abs()<1e-9].folds_no_alarm.max()))
+k01,Sec V-E (time only pooled min),0.399,f3(LA.loc[NEG].tm_pooled.min())
+k02,Sec V-E (time only pooled max),0.444,f3(LA.loc[NEG].tm_pooled.max())
+k03,Sec V-E / VI (pooled bias min),0.086,f3(-LA.loc[NEG].d_pooled.max())
+k04,Sec V-E / VI (pooled bias max),0.131,f3(-LA.loc[NEG].d_pooled.min())
+k05,Sec V-E (time only LPGO min),0.459,f3(LA.loc[NEG].tm_lpo.min())
+k06,Sec V-E (time only LPGO max),0.536,f3(LA.loc[NEG].tm_lpo.max())
+k07,Sec V-E (time only LPGO difference min),−0.070,sg(LA.loc[NEG].d_lpo.min())
+k08,Sec V-E (time only LPGO difference max),+0.006,sg(LA.loc[NEG].d_lpo.max())
+k09,Sec V-E (state 0.1 LPGO improvement),0.024,"f3(ct('state', 0.1).dl)"
+k10,Sec V-E (state 0.1 LPGO detected),78%,"pct(ct('state', 0.1).power_lpo)"
+k11,Sec V-E (state 0.1 pooled declared worse),95%,"pct(ct('state', 0.1).below_pooled)"
+k12,Sec V-E (state null above zero),0%,"pct(ct('state', 0).power_lpo)"
+k13,Sec V-E (trait null above zero),5.0%,"pct(ct('trait', 0).power_lpo)"
+k14,Sec V-E (state null below zero),5.0%,"pct(ct('state', 0).below_lpo)"
+k15,Sec V-E (trait null below zero),30%,"pct(ct('trait', 0).below_lpo)"
+k16,Sec V-E (calibrated state threshold),0.004,"f3(ct('state', 0).t_cal)"
+k17,Sec V-E (calibrated trait threshold),0.169,"f3(ct('trait', 0).t_cal)"
+k18,Sec V-E (state 0.15 improvement),0.055,"f3(ct('state', 0.15).dl)"
+k19,Sec V-E (state 0.15 detected; 80% or more),99%,"pct(ct('state', 0.15).power_lpo)"
+k20,Sec V-E (pooled reaches 80% at delta),0.3,"f""{min(d for d in CT[CT.kind=='state'].delta if ct('state', d).power_pooled >= 0.8):g}"""
+k21,Sec V-E (MCC test reaches 80% at delta),0.3,"f""{min(d for d in CT[CT.kind=='state'].delta if ct('state', d).power_t >= 0.8):g}"""
+k22,Sec V-E (state 0.3 mean MCC gain),0.016,"f3(ct('state', 0.3).dmcc)"
+k23,Sec V-E (trait 3 LPGO improvement),0.178,"f3(ct('trait', 3).dl)"
+k24,Sec V-E (trait 3 LPGO detected),60%,"pct(ct('trait', 3).power_lpo)"
+k25,Sec V-E (trait 3 calibrated),58%,"pct(ct('trait', 3).power_cal)"
+k26,Sec V-E (trait 3 MCC detected),0%,"pct(ct('trait', 3).power_t)"
+k27,Sec VI (state 0.15 improvement detected; 0.055 in 99%),99%,"pct(ct('state', 0.15).power_lpo)"
+k28,Sec VI (trait 1.5 improvement),0.128,"f3(ct('trait', 1.5).dl)"
+x01,Sec V (secondary tests),73,str(len(SEC))
+x02,Sec V (unadjusted p below 0.05),2,str(int((SEC.p < 0.05).sum()))
+x03,Sec V (BH adjusted p below 0.05),0,str(int((SEC.p_bh_all < 0.05).sum()))
+h01,Sec V-E (state control half widths min),0.006,f3(CT[CT.kind=='state'].hw_lpo.min())
+h02,Sec V-E (state control half widths max),0.035,f3(CT[CT.kind=='state'].hw_lpo.max())
+h03,Sec V-E (trait control half widths min),0.119,f3(CT[CT.kind=='trait'].hw_lpo.min())
+h04,Sec V-E (trait control half widths max),0.155,f3(CT[CT.kind=='trait'].hw_lpo.max())
+h05,Sec V-E (real detector half widths min),0.106,f3(((LA.loc[DET].d_lpo_hi - LA.loc[DET].d_lpo_lo) / 2).min())
+h06,Sec V-E (real detector half widths max),0.141,f3(((LA.loc[DET].d_lpo_hi - LA.loc[DET].d_lpo_lo) / 2).max())
+h07,Sec V-E (RF time only half width),0.103,f3((LA.loc['RF time only'].d_lpo_hi - LA.loc['RF time only'].d_lpo_lo) / 2)
+h08,Sec V-E (trait replicates with LPGO improvement 0.10 to 0.15),245,str(len(band()))
+h09,Sec V-E (RF LPGO improvement),0.123,f3(LA.loc['RF'].d_lpo)
+h10,Sec V-E (LPGO detected among those replicates),8.6%,pct((band().dl_lo > 0).mean())
+h11,Sec V-E (trait null reaching the RF improvement),6.5%,pct((tnull().dl >= LA.loc['RF'].d_lpo).mean())
+h12,Sec V-E (trait null reaching the MLP improvement),28%,pct((tnull().dl >= LA.loc['MLP'].d_lpo).mean())
+h13,Sec VI-C (SD of the LPGO difference under the trait null),0.102,f3(tnull().dl.std())
+h14,Sec VI-C (mean bootstrap standard error under the trait null; 95% half width / 1.96),0.060,f3(((tnull().dl_hi - tnull().dl_lo) / 2 / 1.96).mean())
+h15,Sec VI-C (trait null intervals above zero),5.0%,pct((tnull().dl_lo > 0).mean())
+h16,Sec VI-C (trait null intervals below zero),30%,pct((tnull().dl_hi < 0).mean())
+h17,Sec V-A / VI (no sickness windows; Table III note),"1,469",cnt(K['never_windows'])
+n01,Table III note (fold accuracy RF),0.668,f3(PR.loc['RF'].acc)
+n02,Table III note (fold accuracy GB),0.675,f3(PR.loc['GB'].acc)
+n03,Table III note (fold accuracy RF+GB),0.675,f3(PR.loc['RF+GB'].acc)
+n04,Table III note; Sec VI (fold accuracy LR),0.564,f3(PR.loc['LR'].acc)
+n05,Table III note (fold accuracy MLP),0.573,f3(PR.loc['MLP'].acc)
+n06,Table III note (balanced accuracy min),0.628,f3(PR.loc[DET].bal_acc.min())
+n07,Table III note (balanced accuracy max),0.759,f3(PR.loc[DET].bal_acc.max())
+n08,Sec V-C episodes (detectors min),17,str(int(EP.loc[DET].detected.min()))
+n09,Sec V-C episodes (detectors max),24,str(int(EP.loc[DET].detected.max()))
+n10,Sec V-C episodes (observed minus shifted min; detectors and clock),+0.008,"sg(min(EP.loc[m].ep_recall - err(m, None).random_mean for m in ORDER))"
+n11,Sec V-C episodes (observed minus shifted max),+0.098,"sg(max(EP.loc[m].ep_recall - err(m, None).random_mean for m in ORDER))"
+n12,Sec V-C episodes (MLP share of shifts at least as high),0.040,"f3(err('MLP', None).p_above)"
+n13,Sec V-C episodes (only the MLP below 0.05),MLP,"','.join(m for m in ORDER if err(m, None).p_above < 0.05)"
+n14,Sec V-C episodes (matched: minus shifted min),−0.007,"sg(min(EP.loc[m].ep_recall_m44 - err(m, 0.44).random_mean for m in ORDER))"
+n15,Sec V-C episodes (matched: minus shifted max),+0.058,"sg(max(EP.loc[m].ep_recall_m44 - err(m, 0.44).random_mean for m in ORDER))"
+n16,Sec V-C episodes (pre onset share min),0.161,f3(EP.loc[ORDER].pre_onset_share.min())
+n17,Sec V-C episodes (pre onset share max),0.290,f3(EP.loc[ORDER].pre_onset_share.max())
+n18,Sec V-C nested features (time only RF),0.313,"f3(ab('ablation_time', 'RF'))"
+n19,Sec V-C nested features (time only GB),0.388,"f3(ab('ablation_time', 'GB'))"
+n20,Sec V-C nested features (telemetry RF),0.430,"f3(ab('ablation_tel', 'RF'))"
+n21,Sec V-C nested features (telemetry GB),0.459,"f3(ab('ablation_tel', 'GB'))"
+n22,Sec V-C nested features (telemetry LR),0.204,"f3(ab('ablation_tel', 'LR'))"
+n23,Sec V-C nested features (telemetry and time RF),0.442,"f3(ab('ablation_tel_time', 'RF'))"
+n24,Sec V-C nested features (telemetry and time GB),0.457,"f3(ab('ablation_tel_time', 'GB'))"
+n25,Sec V-C nested features (telemetry and time LR),0.197,"f3(ab('ablation_tel_time', 'LR'))"
+n26,"Sec V-D (episodes needed for a 5% false negative budget at 95% confidence, exact binomial)",59,"str(min(n for n in range(1, 1000) if 0.95 ** n <= 0.05))"

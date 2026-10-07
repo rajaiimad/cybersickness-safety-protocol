@@ -1,0 +1,7 @@
+# Exact versions of the reported run (Python 3.11.15, CPU only).
+# Other versions may change the fitted models in the last decimals; the statistics code itself is version robust.
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1
+scikit-learn==1.8.0
+matplotlib==3.10.9

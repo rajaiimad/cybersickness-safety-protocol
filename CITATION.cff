@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper and this repository."
+title: "A Safety Oriented Evaluation Protocol for Cybersickness Detection in Virtual Reality: code and results"
+authors:
+  - {family-names: Darabee, given-names: Rajai}
+  - {family-names: Muniandy, given-names: Manoranjitham}
+  - {family-names: Cheng, given-names: Wai Khuen}
+  - {family-names: Sumiea, given-names: Ebrahim Hamid}
+  - {family-names: Shindi, given-names: Omar}
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/rajaiimad/cybersickness-safety-protocol"
+# doi: 10.5281/zenodo.XXXXXXX   # add after archiving the submitted release on Zenodo
+references:
+  - type: dataset
+    title: "UFFCSData: Raw and selected datasets with user tests reporting the level of discomfort during virtual experiments"
+    url: "https://github.com/tmp1986/UFFCSData"
+    license: AGPL-3.0

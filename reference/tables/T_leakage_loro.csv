@@ -1,0 +1,2 @@
+model,split,acc,mcc,auc
+RF,"leave one recording out, 76 features",0.6600638977635783,0.30698869018311525,0.7276547401771839

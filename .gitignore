@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+# scratch output of a separate run (set CSP_OUTPUTS to a folder outside the repository instead)
+outputs_refit/

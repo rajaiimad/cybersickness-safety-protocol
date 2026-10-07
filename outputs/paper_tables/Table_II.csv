@@ -1,0 +1,11 @@
+Property,Value
+Windows,"9,390"
+Recordings / reconstructed descriptor derived groups,35 / 22
+Groups with no positive window,6
+Groups containing both classes,16 of 22
+Negative windows (st = 0),"5,243"
+Positive windows (st ≥ 1); prevalence,"4,147; 0.44"
+Severity 1 / 2 / 3 windows,"2,656 / 670 / 821"
+Groups with any severity 3 window,7
+Positive episodes,31
+"Features, primary / full (Appendix A)",76 / 99

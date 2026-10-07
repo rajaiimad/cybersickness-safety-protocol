@@ -1,0 +1,13 @@
+model,rule,all,without_big,n_without
+Clock,m44,267,223,531
+Clock,primary,328,268,531
+GB,m44,330,48,531
+GB,primary,420,138,531
+LR,m44,124,93,531
+LR,primary,253,136,531
+MLP,m44,265,140,531
+MLP,primary,450,307,531
+RF,m44,279,85,531
+RF,primary,413,147,531
+RF+GB,m44,305,58,531
+RF+GB,primary,421,139,531
